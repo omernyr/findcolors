@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+}
+
+.sidebar {
+  width: 320px;
+  min-width: 320px;
+  border-right: 1px solid #ccc;
+  padding: 25px;
+
+  .logo {
+    margin-bottom: 25px;
+
+    a {
+      font-size: 30px;
+    }
+  }
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #999;
+}
+
+.menu {
+  ul {
+    li {
+      a {
+        font-weight: 600;
+        display: block;
+        color: #333;
+        cursor: pointer;
+
+        &:hover {
+          color: #0099e5;
+
+        }
+      }
+    }
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0.5em;
+  font-size: 23px;
+  cursor: pointer;
+  background-color: red;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.about-modal {
+  position: relative;
+  max-width: 720px;
+  box-shadow: 0 0 15px 0 rgba(#000000, 0.1);
+  padding: 3em 4em;
+}
+
+.about-modal-overlay {
+  background-color: rgba(#fff, 0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 0.8em;
+  }
+
+  p {
+    font-size: 17px;
+    color: rgba(42, 39, 39, 0.753);
+    margin-bottom: 0.9em;
+    line-height: 1.8em;
+  }
+}
+
+
+.content {
+  flex: 1;
+  overflow: auto;
+
+  .brands {
+    padding: 25px;
+
+    .brand {
+      border: 1px solid #ddd;
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+
+      &.selected {
+        border-color: red;
+
+        .brand-colors {
+          span {
+            flex: 1;
+            text-indent: 0;
+          }
+        }
+      }
+
+      h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      &-colors {
+        display: flex;
+
+        span {
+          cursor: pointer;
+          background: var(--bgColor);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--textColor);
+          text-indent: -9999px;
+          width: 70px;
+
+        }
+      }
+    }
+
+
+  }
+
+  .header {
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    position: sticky;
+    top: 0;
+
+    .search {
+      flex: 1;
+      position: relative;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 100%;
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        padding: 0 60px;
+
+      }
+
+
+
+    }
+  }
+
+}
+
+.download {
+
+  right: 0;
+  position: absolute;
+  z-index: 100;
+  padding: 1em;
+  display: flex;
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 0.37em;
+
+    a,
+    button {
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background-color: transparent;
+      cursor: pointer;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+  }
+
+  .selected {
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    button {
+      background-color: transparent;
+      color: #999;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-right: 0.3em;
+
+      svg {
+        path {
+          stroke: #999;
+        }
+      }
+    }
+
+  }
+}

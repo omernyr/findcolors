@@ -16,7 +16,7 @@ const Sidebar = () => {
         <>
             <aside className='sidebar'>
                 <div className='logo'>
-                    <a> Brand <b>Colors</b> </a>
+                    <a> find <b>Colors</b> </a>
 
                 </div>
                 <div className="description">
